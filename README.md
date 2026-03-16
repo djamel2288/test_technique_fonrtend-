@@ -54,6 +54,29 @@ Par défaut, le test demande le port 3000. Si celui-ci est occupé (cas fréquen
 
 ---
 
+## 🌍 Déploiement & Environnements
+
+L'application est conçue pour être testée dans deux environnements distincts :
+
+### 1. Environnement Local (Recommandé pour la revue)
+*   **Pourquoi** : C'est le seul environnement qui permet une **persistance réelle** des données (ajout de candidats, commentaires, changements de statut) directement dans le fichier `db.json`.
+*   **Lancement** : `npm run start`.
+
+### 2. Environnement Serveur (Vercel)
+*   **Pourquoi** : Offre une démo "Live" immédiate sans installation pour le recruteur.
+*   **Différence Technique** : Sur Vercel, l'API tourne via une **Serverless Function** (`api/server.js`). Le système de fichiers étant éphémère, les modifications de données sont visibles pendant la session mais ne sont pas sauvegardées de manière permanente sur le serveur.
+*   **URL de démo** : _(À compléter après votre déploiement Vercel)_
+
+---
+
+## 💡 Pourquoi ces technologies ?
+
+*   **Vue 3 & Pinia** : Pour la réactivité et la gestion d'état moderne. Bien que mon expertise principale soit Angular, Vue 3 a été choisi pour ce test afin de démontrer une capacité d'adaptation rapide à une nouvelle stack "on-the-fly".
+*   **Tailwind CSS** : Utilisé pour garantir un design "Premium" et responsive en un temps record, tout en respectant une cohérence visuelle stricte.
+*   **IA-Assisted Workflow** : L'usage d'outils d'IA nous a permis de livrer en 48h un projet qui en nécessiterait normalement 72h+, sans sacrifier la qualité architecturale (découplage des services, typage TypeScript).
+
+---
+
 ## 📂 Structure du Projet
 
 - `src/services/` : Abstraction API (Axios).
