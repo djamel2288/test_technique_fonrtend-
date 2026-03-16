@@ -70,7 +70,20 @@ Le projet utilise un proxy Vite (`vite.config.ts`) pour rediriger les appels API
 
 ---
 
-## 4. Journal de Bord & Défis Rencontrés (Notre "Journey")
+## 4. Évolutivité & Passage en Production (Scalability)
+
+Bien que ce test utilise `json-server` pour la simulation de données, l'architecture a été conçue pour être "Production Ready" :
+
+*   **Abstraction Totale** : Grâce à la couche `src/services/`, le reste de l'application (Sores, Composants) est totalement agnostique de la technologie backend. 
+*   **Migration Facile** : Pour passer d'un mock JSON à une API réelle (Node.js, Java, Python), il suffit de modifier l'URL de base dans le fichier `api.ts`. Aucun changement n'est nécessaire dans la logique métier.
+*   **Environnements** : 
+    *   **Local** : Utilisation de `json-server` avec écriture sur disque (`db.json`) pour un développement rapide.
+    *   **Démo (Vercel)** : Utilisation d'une fonction serverless pour une démonstration live immédiate.
+    *   **Production** : Prêt pour une intégration avec un backend sécurisé (JWT, filtrage coté serveur réel, base de données persistante PostgreSQL/MongoDB).
+
+---
+
+## 5. Journal de Bord & Défis Rencontrés (Notre "Journey")
 
 Le développement de cette application a été marqué par plusieurs défis techniques qui ont nécessité des ajustements pour garantir une solution robuste :
 
