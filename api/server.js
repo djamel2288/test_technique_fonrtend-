@@ -6,8 +6,7 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-// Add custom routes if needed
-// Note: Vercel routes /api/ to this function via vercel.json rewrites
+// Add custom rewriter to handle /api prefix
 server.use(jsonServer.rewriter({
   '/api/*': '/$1'
 }));
