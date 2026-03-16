@@ -1,7 +1,12 @@
 import axios from 'axios'
 
+const isProd = import.meta.env.PROD
+const baseURL = isProd 
+  ? 'https://my-json-server.typicode.com/djamel2288/test_technique_fonrtend-'
+  : '/api'
+
 const api = axios.create({
-  baseURL: '/api', // Proxy set up in vite.config.ts points to http://localhost:3001
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
