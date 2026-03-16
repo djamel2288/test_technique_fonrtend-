@@ -12,8 +12,8 @@ export const useCandidateStore = defineStore('candidates', {
     totalCount: 0,
     filters: {
       'nom:contains': '', // Target name specifically for reliability
-      statut: '',
-      poste: '',
+      statut: localStorage.getItem('recruit_filter_statut') || '',
+      poste: localStorage.getItem('recruit_filter_poste') || '',
       dateCandidature_gte: '', // Start date
       dateCandidature_lte: '', // End date
       competences_like: '', // Skills filter
@@ -56,6 +56,10 @@ export const useCandidateStore = defineStore('candidates', {
 
     setFilter(key: string, value: any) {
       this.filters[key] = value
+      // Persist specific filters for UX
+      if (['statut', 'poste'].includes(key)) {
+        localStorage.setItem(`recruit_filter_${key}`, value)
+      }
       this.filters._page = 1
       this.fetchCandidates()
     },

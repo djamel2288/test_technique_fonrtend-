@@ -26,6 +26,25 @@ Le store Pinia `useCandidateStore` gère :
 *   L'état des filtres (recherche, tri, pagination).
 *   L'UI Optimiste : Lors du changement de statut, l'interface est mise à jour immédiatement avant la réponse du serveur pour une sensation de fluidité accrue.
 
+### Architecture des Composants
+```mermaid
+graph TD
+    App[App.vue] --> Header[Header / Nav]
+    App --> Router[Router View]
+    Router --> Dashboard[Dashboard.vue]
+    Router --> Candidates[Candidates.vue]
+    Candidates --> FilterDrawer[FilterDrawer.vue]
+    Candidates --> CandidateTable[CandidateTable.vue]
+    Candidates --> CandidateDetail[CandidateDetail.vue]
+    CandidateDetail --> Comments[Comments Section]
+    Candidates --> CandidateForm[CandidateForm.vue]
+    
+    Dashboard --> Store[CandidateStore]
+    Candidates --> Store
+    Store --> Service[CandidateService]
+    Service --> API[Axios / JSON-Server]
+```
+
 ### UI/UX : Drawer Pattern
 Plutôt que d'utiliser des pages de détail séparées, nous avons opté pour des **Drawers (volets latéraux)** pour :
 *   Conserver le contexte de recherche (la table reste visible en arrière-plan).

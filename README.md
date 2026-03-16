@@ -84,8 +84,11 @@ L'application est conçue pour être testée dans deux environnements distincts 
 - `src/components/` : Composants UI et métier.
 - `DOCS/` : Documentation détaillée demandée par le test.
 
-## 📝 Livrables (Vérifiés)
-- [✓] Analyse technique et UX (`DOCS/ANALYSIS.md`)
-- [✓] Décisions d'architecture (`DOCS/DECISIONS.md`)
-- [✓] Fonctionnalités obligatoires (Liste, Détails, Filtres, Recherche, État, Pagination, **Commentaires**)
-- [✓] Bonus Mid-Level (Optimistic UI, TypeScript, Design "Luxe", Filtres avancés)
+- [✓] Bonus Mid-Level (Optimistic UI, TypeScript, Design "Luxe", Filtres avancés, **Persistance**)
+
+## ⏳ Temps Passé
+- **Analyse & Architecture** : 1h
+- **Développement UI & Store** : 3h
+- **Implémentation Filtres & API** : 1.5h
+- **Finalisation & Docs** : 1.5h
+- **Total** : ~7 heures
