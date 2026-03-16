@@ -179,7 +179,7 @@ function handleSort(key: any) {
 function handleSearch() {
   if (searchTimeout) clearTimeout(searchTimeout)
   searchTimeout = setTimeout(() => {
-    store.setFilter('nom:contains', searchQuery.value)
+    store.setFilter('q', searchQuery.value)
   }, 400) // Debounce search
 }
 

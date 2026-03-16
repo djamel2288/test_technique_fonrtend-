@@ -11,7 +11,7 @@ export const useCandidateStore = defineStore('candidates', {
     error: null as string | null,
     totalCount: 0,
     filters: {
-      'nom:contains': '', // Target name specifically for reliability
+      q: '', // Global search parameter for My JSON Server
       statut: localStorage.getItem('recruit_filter_statut') || '',
       poste: localStorage.getItem('recruit_filter_poste') || '',
       dateCandidature_gte: '', // Start date
