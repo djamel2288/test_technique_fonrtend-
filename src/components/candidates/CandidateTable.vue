@@ -84,13 +84,12 @@ const columns = [
 
 function getStatusVariant(statut: string) {
   switch (statut) {
-    case 'Hired':
     case 'Accepté': return 'success'
-    case 'Rejected':
     case 'Refusé': return 'danger'
-    case 'Interview':
-    case 'Entretien': return 'warning'
-    case 'A nouveau': return 'info'
+    case 'Entretien':
+    case 'Entretien RH':
+    case 'Entretien technique': return 'warning'
+    case 'En attente': return 'info'
     default: return 'default'
   }
 }

@@ -119,7 +119,7 @@ export const useCandidateStore = defineStore('candidates', {
         const response = await candidateService.getAll({}) // Fetch all candidates without filters
         this.dashboardCandidates = Array.isArray(response) ? response : (response as any).data || []
       } catch (err) {
-        console.error("Dashboard fetch error", err)
+        console.error("Erreur lors du chargement des statistiques du tableau de bord", err)
       } finally {
         this.loading = false
       }

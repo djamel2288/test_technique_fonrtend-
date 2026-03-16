@@ -15,7 +15,7 @@
               class="text-sm font-medium transition-colors hover:text-primary-400 px-1 py-4 border-b-2"
               :class="[$route.name === 'dashboard' ? 'border-primary-500 text-primary-400' : 'border-transparent text-slate-400']"
             >
-              Dashboard
+              Tableau de Bord
             </router-link>
             <router-link 
               to="/candidates" 

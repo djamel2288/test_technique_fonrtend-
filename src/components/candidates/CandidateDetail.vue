@@ -18,7 +18,7 @@
         <div class="flex items-start space-x-3">
           <Mail class="w-4 h-4 text-slate-400 mt-0.5" />
           <div>
-            <p class="text-xs text-slate-500">Email</p>
+            <p class="text-xs text-slate-500">E-mail</p>
             <a :href="`mailto:${candidate.email}`" class="text-sm text-primary-600 hover:underline">{{ candidate.email }}</a>
           </div>
         </div>
