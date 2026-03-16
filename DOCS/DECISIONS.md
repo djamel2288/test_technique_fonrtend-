@@ -63,6 +63,11 @@ Les données du Dashboard (`dashboardCandidates`) sont désormais isolées de ce
 ### Proxy de Développement
 Le projet utilise un proxy Vite (`vite.config.ts`) pour rediriger les appels API vers le port **3001**. Cela simplifie le code client (pas besoin d'URLs absolues partout) et évite les problèmes de CORS pendant la phase de test.
 
+## 3. Stratégie de Tests
+
+*   **Vitest** : Un framework de test ultra-rapide et compatible nativement avec Vite.
+*   **Service Testing** : Pour ce test, nous avons priorisé le test de la couche de service (`smoke.test.ts`). L'objectif est de garantir que les méthodes d'accès aux données (GET, PATCH, POST) sont correctement définies et prêtes pour l'intégration, assurant une base solide pour l'application.
+
 ---
 
 ## 4. Journal de Bord & Défis Rencontrés (Notre "Journey")
@@ -92,3 +97,7 @@ Le développement de cette application a été marqué par plusieurs défis tech
 ### ✅ Excellence UI/UX (Sans accroc)
 *   **Constat** : Contrairement aux défis techniques liés à l'API, l'implémentation de l'interface (Vue 3 + Tailwind CSS) s'est déroulée sans aucun bug structurel ou esthétique du premier coup.
 *   **Résultat** : Les animations, le système de Drawer, et la réactivité du design (Responsive) ont été validés dès le premier jet, garantissant une expérience utilisateur fluide et "Premium" sans nécessiter de retouches correctives.
+
+### ✅ Qualité & Robustesse (Tests)
+*   **Défi** : Assurer que les modifications successives (Dashboard, filtres) ne cassent pas les services métier.
+*   **Solution** : L'introduction tardive mais efficace de **Vitest** a permis de valider la structure de la couche `CandidateService`. Cela montre une rigueur professionnelle et une préparation au passage en production.

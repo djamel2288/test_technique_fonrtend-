@@ -21,8 +21,9 @@ Une application moderne de gestion de recrutements développée avec **Vue 3**, 
 - **Frontend** : Vue 3 (Composition API), Vite, TypeScript.
 - **Style** : Tailwind CSS (Thème personnalisé).
 - **État** : Pinia (Gestion globale et filtres).
-- **API** : Axios (Couche service découplée).
-- **Mock Server** : JSON Server.
+- [x] **API** : Axios (Couche service découplée).
+- [x] **Mock Server** : JSON Server.
+- [x] **Tests** : Vitest (Tests unitaires).
 
 ## 📦 Installation & Démarrage
 
@@ -39,6 +40,11 @@ npm run start
 
 - **Frontend** : `http://localhost:3005`
 - **API (json-server)** : `http://localhost:3001`
+
+### 3. Exécuter les Tests
+```bash
+npm run test
+```
 
 ---
 
@@ -84,7 +90,7 @@ L'application est conçue pour être testée dans deux environnements distincts 
 - `src/components/` : Composants UI et métier.
 - `DOCS/` : Documentation détaillée demandée par le test.
 
-- [✓] Bonus Mid-Level (Optimistic UI, TypeScript, Design "Luxe", Filtres avancés, **Persistance**)
+- [✓] Bonus Mid-Level (Optimistic UI, TypeScript, Design "Luxe", Filtres avancés, **Persistance**, **Tests Unitaires**)
 
 ## ⏳ Temps Passé
 - **Analyse & Architecture** : 1h
