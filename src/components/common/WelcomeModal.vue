@@ -15,11 +15,11 @@
         
         <div class="p-8 space-y-4">
           <p class="text-slate-600 leading-relaxed text-sm">
-            Je suis un développeur <strong>Fullstack (5+ ans d'expérience)</strong>, principalement expert sur Angular. 
-            Vue.js n'étant pas ma stack habituelle, j'ai relevé le défi d'utiliser des outils d'<strong>IA</strong> pour accélérer l'implémentation et livrer un résultat de haute qualité dans un délai très court.
+            Je suis développeur <strong>Fullstack (4+ ans d'expérience)</strong>, principalement sur Angular/springboot. 
+            Vue.js n'est pas ma stack habituelle, donc pour gagner du temps, j'ai utilisé des outils d'<strong>IA</strong> pour m'aider à réaliser ce test rapidement.
           </p>
           <p class="text-slate-600 leading-relaxed text-sm italic border-l-4 border-primary-100 pl-4">
-            "Le but était de prioriser l'architecture et l'expérience utilisateur, malgré le temps limité."
+            "Prioriser l'architecture et l'expérience utilisateur, malgré un délai très court."
           </p>
           
           <div class="pt-6">
